@@ -61,6 +61,13 @@ app.get('/find', function(req, res) {
 
 // BUSCAR POR NOMBRE 
 
+app.get('/findPorNombre', function(req, res) {
+    Entrada.find({
+        name: req.query.name
+    }, function(err, docs) {
+        res.send(docs);
+    });
+});
 
 
 app.listen(app.get('port'), () => {
