@@ -84,6 +84,12 @@ $(document).ready(() => {
      $(y).click( () => {dump(`${$(y).text()}.txt`); });
    });
 
+  $("#savefile").click(() =>{
+    var data = $("#original").val();
+    $.get("/mongo", {text: data});
+    return false;
+    
+  });
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
     let dropZone = $('.drop_zone')[0];
