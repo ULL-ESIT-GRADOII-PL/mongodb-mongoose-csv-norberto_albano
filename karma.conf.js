@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Thu Apr 14 2016 11:39:32 GMT+0100 (WEST)
+// Generated on Thu Apr 21 2016 09:09:45 GMT+0000 (UTC)
 
 module.exports = function(config) {
   config.set({
@@ -15,37 +15,37 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'public/test/test.js',
-      'public/vendor/mocha.js',
-      'public/vendor/chai.js',
-      'public/vendor/sinon-1.17.3.js',
-      'public/vendor/blanket.min.js'
     ],
-
-    client: {
+    
+     client: {
           mocha: {
             ui: 'bdd'
           }
     },
+
+
     // list of files to exclude
     exclude: [
-      'gulpfile.js'
+       'gulpfile.js'
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'public/index.html': ['html2js']
     },
-
-    plugins : [
+  
+      plugins : [
       'karma-mocha',
       'karma-chai',
       'karma-chrome-launcher',
       'karma-firefox-launcher',
       'karma-html2js-preprocessor',
       'karma-phantomjs-launcher',
+      'karma-safari-launcher'
     ],
+
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
