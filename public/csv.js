@@ -1,5 +1,6 @@
 // See http://en.wikipedia.org/wiki/Comma-separated_values
 (() => {
+  
 "use strict"; // Use ECMAScript 5 strict mode in browsers that support it
 
 const resultTemplate = `
@@ -64,15 +65,18 @@ const handleDragOver = (evt) => {
 }
 
 $(document).ready(() => {
+  
     let original = document.getElementById("original");
+    let nombre = document.getElementById("nombre");
     if (window.localStorage && localStorage.original) {
       original.value = localStorage.original;
     }
 
     /* Request AJAX para que se calcule la tabla */
-    $("#parser").click( () => {
+    $("#analizar").click( () => {
+      console.log("parser");
           if (window.localStorage) localStorage.original = original.value;
-          console.log("hola");
+          
           $.get("/csv", /* Request AJAX para que se calcule la tabla */
             { input: original.value },
             fillTable,
@@ -84,7 +88,8 @@ $(document).ready(() => {
      $(y).click( () => {dump(`${$(y).text()}.txt`); });
    });
 
-  $("#savefile").click(() =>{
+  $("#save").click(() =>{
+     console.log("guardar");
     var data = $("#original").val();
     $.get("/mongo", {text: data});
     return false;
