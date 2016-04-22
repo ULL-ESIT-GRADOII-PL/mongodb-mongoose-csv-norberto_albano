@@ -1,0 +1,53 @@
+table.center {
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-left: 90px;
+  margin-top: 10px;
+  border: ridge;
+  border-color: blue;
+  background-color: white; }
+
+.output tr:nth-child(odd) {
+  background-color: #eee; }
+.output tr:nth-child(even) {
+  background-color: #00FF66; }
+
+.error td {
+  background-color: red; }
+
+.body {
+  background-color: #ffffff;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace; }
+
+.titulo_practica {
+  display: table;
+  width: 100%;
+  position: relative;
+  background-color: #000000 !important;
+  color: white;
+  height: 50px; }
+
+.titulo {
+  display: table-cell;
+  font-weight: bold;
+  font-family: "Brush Script MT", cursive;
+  padding-top: 10px;
+  width: 75%;
+  vertical-align: middle;
+  margin-top: 0; }
+
+.place-right {
+  display: table-cell;
+  float: right !important;
+  padding-right: 10px;
+  padding-top: 5px !important; }
+
+.icon {
+  position: relative;
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-top: 0; }
+
+/*# sourceMappingURL=style.css.map */

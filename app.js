@@ -26,7 +26,7 @@ app.get('/csv', (request, response) => {
 });
 
 
-const Entrada = require('.models/db');
+const Entrada = require('./models/dataschema.js');
 
 
 app.get('/mongo/', function(req, res) {
