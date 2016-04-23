@@ -74,7 +74,7 @@ $(document).ready(() => {
 
     /* Request AJAX para que se calcule la tabla */
     $("#analizar").click( () => {
-      console.log("parser");
+      
           if (window.localStorage) localStorage.original = original.value;
           
           $.get("/csv", /* Request AJAX para que se calcule la tabla */
